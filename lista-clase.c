@@ -43,41 +43,14 @@ int main(void){
 		return -1;
 }
 
-milista = insertar(milista, 12);
-milista = insertar(milista, 27);
+milista = insertar(milista, 11362);
+milista = insertar(milista, 2157);
 milista = insertar(milista, 2020);
-milista = insertar(milista, 1);
+milista = insertar(milista, 11688);
 
 mostrar (milista);
+
 return 0;
 
-	return 0;
- 
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
+return 0;
 }

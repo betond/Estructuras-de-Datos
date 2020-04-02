@@ -33,6 +33,7 @@ int agranda( struct Vector *vector) {
 }
 
 void mostrar ( struct Vector *vector) {
+    int i=0;
     if(vector == NULL) {
         return;
     }
@@ -45,8 +46,8 @@ void mostrar ( struct Vector *vector) {
 1 - no hay espacio.
 0 - si hay espacio:
 */
-int hay_espacio( struct Vector *vetor) {
-    if vector == NULL) {
+int hay_espacio( struct Vector *vector) {
+    if( vector == NULL) {
         return 1;
     }
     if(vector->cuantos_hay < vector->capacidad) {
@@ -65,7 +66,7 @@ int agregar( struct Vector *vector, int dato) {
     return -1;
     }
     if( ! hay_espacio(vector) ) {  // ó (hay_espacio(vector) == 1)
-        if( agrandar( vector ) != 0) {
+        if( agranda ( vector ) != 0) {
             return 2;
         }
     }
@@ -82,8 +83,8 @@ int inicializar(struct Vector *vector) {
     if( vector == NULL) {
         return -1;
     }
-    vector->datos = (int *) mallloc( sizeof(int) );
-    if vector->datos == NULL) {
+    vector->datos = (int *) malloc( sizeof(int) );
+    if (vector->datos == NULL) {
         return -2;
     }
     vector->cuantos_hay = 0;
@@ -98,7 +99,7 @@ int main(void) {
     
     struct Vector vector;
     
-    iniciar( &vector );
+    inicializar( &vector );
     printf("Dame el valor de n: \n");
     scanf("%d", &n);
     for( i = 1; i <= n; i++) {
